@@ -19,17 +19,17 @@ Workbench is an easy way to start Peatio development environment.
 
 Note: We were unable to get the latest RK release 1.9 to build reliably, wasted lots of time on that, using 1.8 turned out to work just fine. 
 
-1. 1. Recursive clone : `git clone --recursive https://github.com/rubykube/workbench.git`
-1. 2. Checkout 1-8-stable release : `git checkout 1-8-stable`
+1. Recursive clone : `git clone --recursive https://github.com/rubykube/workbench.git`
 
-1. 3.  Make sure everything is on 1.8 release : `git submodule status | cut -d' ' -f3-4`
+2. Checkout 1-8-stable release : `git checkout 1-8-stable`
 
+3.  Make sure everything is on 1.8 release : `git submodule status | cut -d' ' -f3-4`
 
-2. Move to workbench `cd workbench`
+4. Move to workbench `cd workbench`
 
-2. Build the images: `make build`
+5. Build the images: `make build`
 
-3. Run the application: `make run`
+6. Run the application: `make run`
 
 You should add those hosts to your `/etc/hosts` file:
 
