@@ -10,6 +10,11 @@ Workbench is an easy way to start Peatio development environment.
 ## Usage
 
 ### Fix Docker performance
+
+When Docker is consistently using all its assigned CPUs during build at all times, even when seemingly nothing is happening, it's best to restart Docker. 
+I even reset it to factory defaults at some point. This seems to be a bug in docker. It can be mitigated by giving it a little more memory, and removing some CPUs from it to keep the system responsive.
+Symptoms: Using all CPU cores (e.g. 400% when 4 CPUs are assigned); extremely slow build times.
+
  - Set Memory to 4GB (from 2)
  - Set number of processors to 2 if you have 4 processors or 1 if you have 2 (half)
  - Remove shared directories other than /Users /tmp and /private
