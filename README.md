@@ -9,9 +9,21 @@ Workbench is an easy way to start Peatio development environment.
 
 ## Usage
 
+### Fix Docker performance
+ - Set Memory to 4GB (from 2)
+ - Set number of processors to 2 if you have 4 processors or 1 if you have 2 (half)
+ - Remove shared directories other than /Users /tmp and /private
+
+
 ### Prepare the workbench
 
-1. Recursive clone : `git clone --recursive https://github.com/rubykube/workbench.git`
+Note: We were unable to get the latest RK release 1.9 to build reliably, wasted lots of time on that, using 1.8 turned out to work just fine. 
+
+1. 1. Recursive clone : `git clone --recursive https://github.com/rubykube/workbench.git`
+1. 2. Checkout 1-8-stable release : `git checkout 1-8-stable`
+
+1. 3.  Make sure everything is on 1.8 release : `git submodule status | cut -d' ' -f3-4`
+
 
 2. Move to workbench `cd workbench`
 
